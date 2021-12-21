@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Liste</title>
+
+</head>
+<body>
+    
+        <h1 id="titre">Liste des pièces de l'appartement</h1>
+
+        <button id ="next" onclick="location.href='/encodage'" >Encoder une autre pièce</button>
+
+    <ul>
+        <% for (let i=0; i< exam.length; i++) { %>
+        <li><label id="linepiece">Pièce:</label><%= exam[i].name %></li>
+        <li><label id="linesurf">Surface totale: </label></li>
+    </ul>
+    <% } %>
+    
+        <script></script>
+</body>
+</html>

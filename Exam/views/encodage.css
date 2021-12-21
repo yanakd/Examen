@@ -1,0 +1,26 @@
+#titre{   
+    font-size:12px;
+}
+#save{
+    color:white;
+    background-color: steelblue;
+    margin: inside 10px;
+    margin: outside 10px;
+}
+#buttoncal{
+    color:white;
+    background-color: steelblue;
+    margin: inside 10px;
+    margin: outside 10px;
+}
+body{
+    font-size:12px;
+    font-family:arial;
+    margin: inside 10px;
+    border: solid 1px lightgray;
+    width: 500px
+}
+
+input{
+    display:inline-block;
+}

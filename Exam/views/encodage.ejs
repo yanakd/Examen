@@ -1,0 +1,72 @@
+<html>
+<head>
+    <link rel="stylesheet" href="encodage.css" type="text/css"/>
+    <meta charset="utf-8"/>
+    <title>encodage pièce</title>
+    <style>
+        #titre{   
+            font-size:12px;
+        }
+        #save{
+            color:white;
+            background-color: steelblue;
+            margin: inside 10px;
+            margin: outside 10px;
+        }
+        #buttoncal{
+            color:white;
+            background-color: steelblue;
+            margin: inside 10px;
+            margin: outside 10px;
+        }
+        body{
+            font-size:12px;
+            font-family:arial;
+            margin: inside 10px;
+            border: solid 1px lightgray;
+            width: 500px
+        }
+
+        input{
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1 id="titre">Encoder les données de la pièce</h1>
+        
+        <p> <label>Pièce: </label><input id="nom"/> </p>
+
+        <p> <label>Largeur: </label><input type="number" id="larg"/> </p>
+        <p> <label>Longueur: </label><input type="number" id="long"/> </p>
+
+        <button id ="save" onclick="location.href='/liste'" >Enregistrer</button>
+        <p><button id="buttoncal" onclick='Calcul()'>Calculer la surface</button></p>
+        <label id="calcul"></label>
+
+
+        <script>
+            function Calcul(){
+                let cal = document.getElementById("calcul"); 
+                resu=document.getElementById("larg").value*document.getElementById("long").value;
+                cal.textContent = "Surface:"+resu+"M2";
+                
+                let nom=document.getElementById("nom");
+                let aire= document.getElementById("linepiece");
+                aire.textcontent="Pièce:"+nom+resu+"m2";
+                
+                let surfacetot= document.getElementById("linesurf");
+                resultats=[];
+                resultats.push(resu)
+                for (let i=0; i<resultats.lenght;i++){
+                    let tot=0;
+                    tot+=resultats[0];
+                }
+                surfacetot.textcontent="Surface totale:"+tot+"m2";
+    
+    };
+        </script>
+    
+</body>
+</html>
